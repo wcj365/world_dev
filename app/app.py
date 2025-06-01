@@ -1,16 +1,15 @@
 #!/usr/local/bin/env python3
 
-import pandas as pd
 import streamlit as st
 
-from ideal_util.common import audit_trail, ideal_config, ideal_ui, ideal_server
+from ideal_util.common import audit_trail, ideal_ui
 from ideal_util import data_explorer
 import world_dev as wdi 
 
 APP_URL = "TBD"
 
 st.set_page_config(layout="wide")
-st.header("World Development Indicators")
+st.header("World Development Explorer (WDX)")
 
 api, df = wdi.connect()
 params = {

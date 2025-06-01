@@ -16,16 +16,30 @@ url_countries = "https://api.worldbank.org/v2/en/country?format=json&page={}"
 url_wdidata = "https://api.worldbank.org/v2/en/country/all/indicator/{}?date={}:{}&format=jsonstat"
 #url_wdidata2 = "https://api.worldbank.org/v2/{}/country/all/indicator/{}?source=2"
 
+ABOUT = f"""   
+In the era of information and innovation, there is neither a shortage of data nor a shortage of software.
+The challenge is the skills and efforts required to combine the two to discover insights and inform decisions. 
+An interactive visual environment fills this gap as it is designed for researchers and analysts alike to 
+explore data without technical barriers.
+
+**The World Development Explorer (WDX)** is a self-service analytics tool for research and business community. 
+It is an interactive and visual environment for exploring [**The World Development Indicators (WDI)**](https://wdi.worldbank.org). 
+WDI is the World Bank’s premier compilation of cross-country historical data on development. 
+The dataset includes more than 1400 socioeconomic indicators of 200 plus countries over 60 years. 
+It is rich in information about a country's economy, environment, society, and healthcare. 
+
+WDX helps global communities improve understanding and inspire collaboration for a better world.
+WDX is web-based, cloud-hosted, and free for all to use. Users can visually and interactively 
+explore trends and relations and compare countries and regions. 
+The beautiful and insightful charts are of publication-quality and can be readily downloaded for use
+in blogs, presentations, reports, and papers.
+
+Happy Exploring!
+"""
 
 def connect():
     with st.expander("❓ ABOUT"):           
-        st.markdown(
-        '''   
-        The WDI Connector retrieves data from the World Bank via API calls in real-time.
-        
-        For more information about WDI, visit [WDI Website](https://wdi.worldbank.org).
-        '''
-        )  
+        st.markdown(ABOUT) 
     with st.expander(":sunny: QUERY", expanded=True):     
         api, df = query_ui()
         return api, df

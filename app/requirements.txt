@@ -1,0 +1,7 @@
+streamlit
+plotly
+pandas
+openpyxl
+xlsxwriter
+pyjstat
+git+https://github.com/wcj365/ideal_util.git@v1.0.0

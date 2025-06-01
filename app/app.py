@@ -3,12 +3,13 @@
 import pandas as pd
 import streamlit as st
 
-from gao_st.common import audit_trail, ideal_config, ideal_ui, ideal_server
-from gao_st import data_explorer
-from data_sources.world_dev import world_dev as wdi 
+from ideal_util.common import audit_trail, ideal_config, ideal_ui, ideal_server
+from ideal_util import data_explorer
+import world_dev as wdi 
 
-APP_URL = "https://posit-connect.gaoinnovations.gov/ideal"
+APP_URL = "TBD"
 
+st.set_page_config(layout="wide")
 st.header("World Development Indicators")
 
 api, df = wdi.connect()

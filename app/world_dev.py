@@ -7,8 +7,6 @@ from pyjstat import pyjstat
 import pandas as pd
 import streamlit as st
 
-from ideal_util.common import ideal_config, ideal_ui, ideal_server
-
 url_topics ="https://api.worldbank.org/v2/en/topic?format=json"
 url_indicators = "https://api.worldbank.org/v2/en/topic/{}/indicator?format=json&page={}"
 url_indicator = "https://api.worldbank.org/v2/en/indicator/{}?format=json"
